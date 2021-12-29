@@ -1,7 +1,7 @@
 
-import { TodoInput } from "./TodoInput";
+import { TodoInput } from "./GroceryInput";
 import { useState } from "react"
-import { TodoItem } from "./TodoItem";
+import { TodoItem } from "./GroceryList";
 import { nanoid } from "nanoid";
 export const Todo = () => {
     const [list, setList] = useState([]);
@@ -15,9 +15,12 @@ export const Todo = () => {
     setList([...list, payload]);
 }
     const handleToggle = (id) => {
-        alert("Mark Done")
+        setList((list) => {
+        return list.filter((lis) => {
+            return id !== lis.id;
+            });
+          });
     }
-      
     return (
     <>
     <TodoInput getData = {handleClick}/>

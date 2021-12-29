@@ -10,8 +10,8 @@ export const TodoInput = ({getData}) => {
 
     return(
         <>
-        <input type="text" placeholder="Enter Todo" onChange={handleChange} />
-        <button onClick={handleClick}> Add todo</button>
+        <input type="text" placeholder="Enter Grocery" onChange={handleChange} />
+        <button onClick={handleClick}> Add Grocery</button>
         </>
     )
 }
